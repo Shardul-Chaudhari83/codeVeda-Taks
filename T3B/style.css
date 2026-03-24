@@ -1,0 +1,138 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --text-primary: #102a43;
+    --text-secondary: #486581;
+    --btn-primary: #334e68;
+    --btn-primary-hover: #102a43;
+    --btn-danger: #e12d39;
+    --btn-danger-hover: #c91823;
+    --btn-secondary: #9fb3c8;
+    --btn-secondary-hover: #829ab1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+}
+
+.counter-container {
+    padding: 20px;
+}
+
+.counter-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-align: center;
+    width: 360px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.counter-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.count-display {
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 32px;
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.count-display.bump {
+    transform: scale(1.1);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.btn {
+    flex: 1;
+    border: none;
+    border-radius: 16px;
+    padding: 16px 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-decrement {
+    background: var(--btn-secondary);
+}
+
+.btn-decrement:hover {
+    background: var(--btn-secondary-hover);
+}
+
+.btn-reset {
+    background: var(--btn-danger);
+    font-size: 1.1rem;
+    flex: 1.5;
+}
+
+.btn-reset:hover {
+    background: var(--btn-danger-hover);
+}
+
+.btn-increment {
+    background: var(--btn-primary);
+}
+
+.btn-increment:hover {
+    background: var(--btn-primary-hover);
+}
+
+/* Add a subtle animation when reaching 0 and trying to go below */
+.shake {
+    animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
