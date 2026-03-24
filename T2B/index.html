@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intercative-Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="contact-section">
+            <h1>Get In <span class="purple">Touch</span></h1>
+            <p class="contact-subtitle">I'm always open to discussing new projects, creative ideas, or opportunities to
+                be part of your visions.</p>
+
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form action="#" method="POST" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Your Name*</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email*</label>
+                            <input type="email" id="email" name="email" placeholder="Enter a valid email address"
+                                required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone NO*</label>
+                            <input type="text" id="phone" name="phone" placeholder="+91**********" required>
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password*</label>
+                            <input type="password" id="password" name="password"
+                                placeholder="Write your Password here..." required>
+                            <div class="error-message" id="passwordError"></div>
+                        </div>
+                        <button type="submit" class="btn" id="submitBtn">Send Message</button>
+                        <div id="successMessage" class="success-message" style="display: none;">Message submitted
+                            successfully!</div>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong><br><a
+                            href="mailto:shardulchaudhari3283@gmail.com">shardulchaudhari3283@gmail.com</a></p>
+                    <p><strong>Phone:</strong><br>(+91) 70181- *****</p>
+                    <p><strong>Location:</strong><br> Himachal Pradesh, India</p>
+
+                    <div class="social-links">
+                        <h3>Connect With Me</h3>
+                        <a href="https://www.linkedin.com/in/shardul-chaudhari-sc3283/" target="_blank"
+                            class="social-icon">in</a>
+                        <a href="https://www.instagram.com/shardul__chaudhari" target="_blank"
+                            class="social-icon">ig</a>
+                        <a href="https://x.com/ShardulChaudha9" target="_blank" class="social-icon">X</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            
+        </div>
+        <div class="footer-rights">
+               (*) Fields are Mandatory
+               | All rights reserved
+            </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
